@@ -1,7 +1,7 @@
 package com.exaltit.kata.bankaccount.services;
 
 import com.exaltit.kata.bankaccount.errors.AccountNotFoundException;
-import com.exaltit.kata.bankaccount.errors.InvalidOperationException;
+import com.exaltit.kata.bankaccount.errors.InvalidWithdrawalException;
 import com.exaltit.kata.bankaccount.model.Account;
 import com.exaltit.kata.bankaccount.model.Operation;
 import com.exaltit.kata.bankaccount.model.OperationRequest;
@@ -30,7 +30,7 @@ public class BankService {
                             final Double updatedBalance = account.getBalance() + amount * operationType.getFactor();
 
                             if (operationType == OperationType.WITHDRAWAL && updatedBalance < 0) {
-                                throw new InvalidOperationException("Account balance is higher than withdrawal amount");
+                                throw new InvalidWithdrawalException();
                             }
 
                             final Account updatedAccount = new Account(accountId, updatedBalance);

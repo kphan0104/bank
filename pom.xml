@@ -10,6 +10,7 @@
     <version>1.0</version>
     <modules>
         <module>domain</module>
+        <module>client</module>
     </modules>
 
     <properties>
@@ -23,6 +24,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.exaltit.kata.bankaccount</groupId>
+                <artifactId>domain</artifactId>
+                <scope>provided</scope>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>

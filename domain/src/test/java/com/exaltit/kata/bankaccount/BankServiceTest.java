@@ -1,7 +1,7 @@
 package com.exaltit.kata.bankaccount;
 
 import com.exaltit.kata.bankaccount.errors.AccountNotFoundException;
-import com.exaltit.kata.bankaccount.errors.InvalidOperationException;
+import com.exaltit.kata.bankaccount.errors.InvalidWithdrawalException;
 import com.exaltit.kata.bankaccount.model.Account;
 import com.exaltit.kata.bankaccount.model.Operation;
 import com.exaltit.kata.bankaccount.model.OperationRequest;
@@ -67,7 +67,7 @@ public class BankServiceTest {
         doReturn(optionalAccount).when(accountRepository).findById(accountId);
         doReturn(500.0).when(account).getBalance();
 
-        assertThrows(InvalidOperationException.class, () -> service.operate(request));
+        assertThrows(InvalidWithdrawalException.class, () -> service.operate(request));
     }
 
     @Test
