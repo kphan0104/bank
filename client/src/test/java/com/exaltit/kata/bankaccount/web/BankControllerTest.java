@@ -1,7 +1,5 @@
 package com.exaltit.kata.bankaccount.web;
 
-import com.exaltit.kata.bankaccount.errors.AccountNotFoundException;
-import com.exaltit.kata.bankaccount.errors.InvalidWithdrawalException;
 import com.exaltit.kata.bankaccount.model.Operation;
 import com.exaltit.kata.bankaccount.model.OperationRequest;
 import com.exaltit.kata.bankaccount.model.OperationType;
@@ -12,8 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import static com.exaltit.kata.bankaccount.errors.ExceptionMessage.ACCOUNT_NOT_FOUND_MESSAGE;
-import static com.exaltit.kata.bankaccount.errors.ExceptionMessage.INVALID_WITHDRAWAL_MESSAGE;
 import static com.exaltit.kata.bankaccount.web.BankResponse.SUCCESSFUL_DEPOSIT;
 import static com.exaltit.kata.bankaccount.web.BankResponse.SUCCESSFUL_WITHDRAWAL;
 import static org.junit.jupiter.api.Assertions.*;

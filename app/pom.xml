@@ -21,6 +21,10 @@
             <artifactId>client</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.exaltit.kata.bankaccount</groupId>
+            <artifactId>socle</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
