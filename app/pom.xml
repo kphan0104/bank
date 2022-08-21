@@ -9,12 +9,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>client</artifactId>
+    <artifactId>app</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>com.exaltit.kata.bankaccount</groupId>
             <artifactId>domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.exaltit.kata.bankaccount</groupId>
+            <artifactId>client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -25,4 +29,23 @@
             <artifactId>spring-data-cassandra</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.exaltit.kata.bankaccount.Application</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
