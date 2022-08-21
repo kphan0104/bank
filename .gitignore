@@ -1,0 +1,5 @@
+#IntelliJ directory
+.idea
+
+#Maven output
+target/
